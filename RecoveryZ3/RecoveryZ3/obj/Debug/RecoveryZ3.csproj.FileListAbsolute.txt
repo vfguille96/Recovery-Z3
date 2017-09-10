@@ -1,0 +1,16 @@
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\bin\Debug\RecoveryZ3.exe.config
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\bin\Debug\RecoveryZ3.exe
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\bin\Debug\RecoveryZ3.pdb
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.csprojResolveAssemblyReference.cache
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\MainWindow.g.cs
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\App.g.cs
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3_Content.g.cs
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3_MarkupCompile.cache
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3_MarkupCompile.lref
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\MainWindow.baml
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.g.resources
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.Properties.Resources.resources
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.csproj.GenerateResource.Cache
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.csproj.CoreCompileInputs.cache
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.exe
+C:\Users\vfgui\Documents\Visual Studio 2017\Projects\RecoveryZ3\RecoveryZ3\obj\Debug\RecoveryZ3.pdb

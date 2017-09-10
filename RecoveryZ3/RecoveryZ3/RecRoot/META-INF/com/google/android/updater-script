@@ -1,0 +1,60 @@
+ui_print(" ");
+ui_print("===================================");
+ui_print("Installing RecRoot");
+ui_print("Version 4.0.0 by Wolfbreak");
+ui_print("===================================");
+ui_print(" ");
+show_progress(0.750000, 0);
+
+set_progress(0.10);
+ui_print("Installing RecRoot...");
+run_program("/sbin/busybox", "mount", "/system");
+set_progress(0.50);
+
+ui_print(" ");
+ui_print("Installing Root and Recovery...");
+package_extract_file("RXSW/Script/RXSW.sh", "/tmp/RXSW.sh");
+set_perm(0, 0, 0777, "/tmp/RXSW.sh");
+run_program("/tmp/RXSW.sh");
+package_extract_dir("RXSW/SuperSU", "/tmp/SuperSU");
+run_program("/sbin/busybox", "unzip", "/tmp/SuperSU/SuperSU.zip", "META-INF/com/google/android/*", "-d", "/tmp/SuperSU");
+run_program("/sbin/busybox", "sh", "/tmp/SuperSU/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/SuperSU/SuperSU.zip");
+unmount("/system");
+set_progress(0.60);
+
+run_program("/sbin/busybox", "blockdev", "--setrw", "/dev/block/platform/msm_sdcc.1/by-name/system");
+run_program("/sbin/busybox", "mount", "/system");
+package_extract_file("RXSW/Recovery/boot_twrp_recovery.sh", "/tmp/boot_twrp_recovery.sh");
+package_extract_file("RXSW/Recovery/chargemon.sh", "/tmp/chargemon.sh");
+package_extract_file("RXSW/Recovery/recovery.twrp.cpio.lzma", "/tmp/recovery.twrp.cpio.lzma");
+package_extract_file("RXSW/Recovery/busybox", "/tmp/busybox");
+package_extract_file("RXSW/Recovery/recbox", "/tmp/recbox");
+package_extract_file("RXSW/Recovery/install_twrp_recovery.sh", "/tmp/install_twrp_recovery.sh");
+set_perm(0, 0, 0755, "/tmp/busybox");
+set_perm(0, 0, 0755, "/tmp/recbox");
+set_perm(0, 0, 0755, "/tmp/install_twrp_recovery.sh");
+run_program("/tmp/install_twrp_recovery.sh");
+
+package_extract_file("RXSW/Root/utils/modulecrcpatch", "/tmp/modulecrcpatch");
+package_extract_file("RXSW/Root/utils/busybox", "/tmp/busybox");
+package_extract_file("RXSW/Root/utils/installbyeselinux.sh", "/tmp/installbyeselinux.sh");
+package_extract_file("RXSW/Root/utils/installmount.sh", "/tmp/installmount.sh");
+package_extract_file("RXSW/Root/byeselinux.ko", "/tmp/byeselinux.ko");
+package_extract_file("RXSW/Root/wp_mod.ko", "/tmp/wp_mod.ko");
+set_perm(0, 0, 0755, "/tmp/modulecrcpatch");
+set_perm(0, 0, 0755, "/tmp/busybox");
+set_perm(0, 0, 0755, "/tmp/installbyeselinux.sh");
+set_perm(0, 0, 0755, "/tmp/installmount.sh");
+set_perm(0, 0, 0644, "/tmp/byeselinux.ko");
+set_perm(0, 0, 0644, "/tmp/wp_mod.ko");
+assert(run_program("/tmp/installbyeselinux.sh") == "0");
+assert(run_program("/tmp/installmount.sh") == "0");
+set_progress(0.70);
+
+set_progress(0.80);
+ui_print(" ");
+ui_print("================================");
+ui_print("Thanks for your Support of RXSW");
+ui_print("================================");
+ui_print(" ");
+unmount("/system");
